@@ -1745,7 +1745,7 @@ CURLcode Curl_add_custom_headers(struct connectdata *conn,
         while(*ptr && ISSPACE(*ptr))
           ptr++;
 
-        if(*ptr || semicolonp) {
+//tong        if(*ptr || semicolonp) {
           /* only send this if the contents was non-blank or done special */
           CURLcode result = CURLE_OK;
 
@@ -1791,7 +1791,7 @@ CURLcode Curl_add_custom_headers(struct connectdata *conn,
             *semicolonp = ';'; /* put back the semicolon */
           if(result)
             return result;
-        }
+//        }
       }
       headers = headers->next;
     }
